@@ -7,7 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "RemoteHDViewController.h"
+#import "PreferencesManager.h"
+#import "SynthesizeSingleton.h"
+#import "DDLog.h"
+#import "DDFileLogger.h"
+#import "DDTTYLogger.h"
+#import "CustomHTTPProtocol.h"
 
 @interface AppDelegate ()
 
@@ -20,11 +26,22 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
 
-    ViewController *vc = [[ViewController alloc]init];
+    RemoteHDViewController *vc = [[RemoteHDViewController alloc]init];
     self.window.rootViewController = vc;
 
     self.window.backgroundColor = [UIColor purpleColor];
     [self.window makeKeyAndVisible];
+
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE;//定义日志级别
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];// 初始化DDLog日志输出
+
+    //保持一周的文件日志
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
+
+    [NSURLProtocol registerClass:[CustomHTTPProtocol class]];
 
     return YES;
 }
