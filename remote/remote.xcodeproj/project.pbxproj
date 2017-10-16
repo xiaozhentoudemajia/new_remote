@@ -14,6 +14,11 @@
 		65135BE11F94DEF5003C7D35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BE01F94DEF5003C7D35 /* main.m */; };
 		65135BEB1F94DEF5003C7D35 /* remoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BEA1F94DEF5003C7D35 /* remoteTests.m */; };
 		65135BF61F94DEF5003C7D35 /* remoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BF51F94DEF5003C7D35 /* remoteUITests.m */; };
+		656D7FC51F94E8D60050DD29 /* CustomHTTPProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D7FC31F94E8D60050DD29 /* CustomHTTPProtocol.m */; };
+		656D7FCA1F94E94B0050DD29 /* WifiConfigController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D7FC71F94E94B0050DD29 /* WifiConfigController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		656D7FCB1F94E94B0050DD29 /* WifiConfigController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656D7FC91F94E94B0050DD29 /* WifiConfigController.xib */; };
+		656D7FD01F94EC980050DD29 /* ShoutcastController.m in Sources */ = {isa = PBXBuildFile; fileRef = 656D7FCE1F94EC980050DD29 /* ShoutcastController.m */; };
+		656D7FD11F94EC980050DD29 /* ShoutcastController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 656D7FCF1F94EC980050DD29 /* ShoutcastController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,14 @@
 		65135BF11F94DEF5003C7D35 /* remoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = remoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65135BF51F94DEF5003C7D35 /* remoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remoteUITests.m; sourceTree = "<group>"; };
 		65135BF71F94DEF5003C7D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656D7FC31F94E8D60050DD29 /* CustomHTTPProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomHTTPProtocol.m; sourceTree = "<group>"; };
+		656D7FC41F94E8D60050DD29 /* CustomHTTPProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomHTTPProtocol.h; sourceTree = "<group>"; };
+		656D7FC71F94E94B0050DD29 /* WifiConfigController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiConfigController.m; sourceTree = "<group>"; };
+		656D7FC81F94E94B0050DD29 /* WifiConfigController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiConfigController.h; sourceTree = "<group>"; };
+		656D7FC91F94E94B0050DD29 /* WifiConfigController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WifiConfigController.xib; sourceTree = "<group>"; };
+		656D7FCD1F94EC980050DD29 /* ShoutcastController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoutcastController.h; sourceTree = "<group>"; };
+		656D7FCE1F94EC980050DD29 /* ShoutcastController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoutcastController.m; sourceTree = "<group>"; };
+		656D7FCF1F94EC980050DD29 /* ShoutcastController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShoutcastController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +112,9 @@
 		65135BD01F94DEF4003C7D35 /* remote */ = {
 			isa = PBXGroup;
 			children = (
+				656D7FCC1F94EC430050DD29 /* Shoutcast */,
+				656D7FC61F94E8FA0050DD29 /* WifiConfig */,
+				656D7FC21F94E7DE0050DD29 /* HttpProtocol */,
 				65135BD11F94DEF4003C7D35 /* AppDelegate.h */,
 				65135BD21F94DEF5003C7D35 /* AppDelegate.m */,
 				65135BD41F94DEF5003C7D35 /* ViewController.h */,
@@ -127,6 +143,35 @@
 				65135BF71F94DEF5003C7D35 /* Info.plist */,
 			);
 			path = remoteUITests;
+			sourceTree = "<group>";
+		};
+		656D7FC21F94E7DE0050DD29 /* HttpProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				656D7FC41F94E8D60050DD29 /* CustomHTTPProtocol.h */,
+				656D7FC31F94E8D60050DD29 /* CustomHTTPProtocol.m */,
+			);
+			path = HttpProtocol;
+			sourceTree = "<group>";
+		};
+		656D7FC61F94E8FA0050DD29 /* WifiConfig */ = {
+			isa = PBXGroup;
+			children = (
+				656D7FC81F94E94B0050DD29 /* WifiConfigController.h */,
+				656D7FC71F94E94B0050DD29 /* WifiConfigController.m */,
+				656D7FC91F94E94B0050DD29 /* WifiConfigController.xib */,
+			);
+			path = WifiConfig;
+			sourceTree = "<group>";
+		};
+		656D7FCC1F94EC430050DD29 /* Shoutcast */ = {
+			isa = PBXGroup;
+			children = (
+				656D7FCD1F94EC980050DD29 /* ShoutcastController.h */,
+				656D7FCE1F94EC980050DD29 /* ShoutcastController.m */,
+				656D7FCF1F94EC980050DD29 /* ShoutcastController.xib */,
+			);
+			path = Shoutcast;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +282,8 @@
 			files = (
 				65135BDE1F94DEF5003C7D35 /* LaunchScreen.storyboard in Resources */,
 				65135BDB1F94DEF5003C7D35 /* Assets.xcassets in Resources */,
+				656D7FD11F94EC980050DD29 /* ShoutcastController.xib in Resources */,
+				656D7FCB1F94E94B0050DD29 /* WifiConfigController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,9 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656D7FD01F94EC980050DD29 /* ShoutcastController.m in Sources */,
+				656D7FC51F94E8D60050DD29 /* CustomHTTPProtocol.m in Sources */,
 				65135BD61F94DEF5003C7D35 /* ViewController.m in Sources */,
 				65135BE11F94DEF5003C7D35 /* main.m in Sources */,
 				65135BD31F94DEF5003C7D35 /* AppDelegate.m in Sources */,
+				656D7FCA1F94E94B0050DD29 /* WifiConfigController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT4Z44S6X7;
 				INFOPLIST_FILE = remote/Info.plist;
@@ -432,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT4Z44S6X7;
 				INFOPLIST_FILE = remote/Info.plist;
