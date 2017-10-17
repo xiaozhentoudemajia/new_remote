@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ShoutcastController : UIViewController
+@protocol ShoutcastDelegate
+
+- (void)didFinishShoutcast;
+
+@end
+
+@interface ShoutcastController : UINavigationController {
+    id<ShoutcastDelegate> __unsafe_unretained delegate;
+}
+
+@property (nonatomic, assign) id<ShoutcastDelegate> delegate;
 
 @end

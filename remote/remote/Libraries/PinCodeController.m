@@ -26,6 +26,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 @property(strong,nonatomic)NSMutableArray *serverIpArray;
 @property (nonatomic, copy)NSMutableArray *serverImageArray;
 @property(strong,nonatomic)UITableView *serverList;
+@property(strong,nonatomic)UIButton *serverButton;
 @end
 
 @implementation PinCodeController
@@ -242,7 +243,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 
     if (!moreComing) {
         // 初始化
-        self.serverList=[[UITableView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, self.view.frame.size.height-360) style:UITableViewStylePlain];
+        self.serverList=[[UITableView alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width, self.view.frame.size.height-100) style:UITableViewStylePlain];
         // 设置数据源
         NSMutableArray *images  = [NSMutableArray array];
         for(NSInteger index = 0;index<[self.serverNameArray count];index++){
@@ -254,7 +255,26 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
         self.serverList.dataSource = self;
         // 添加到当前View
         [self.view addSubview:self.serverList];
+
+        self.serverButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 414, 80)];
+        [self.serverButton setTitle:@"Return" forState:UIControlStateNormal];
+        [self.serverButton addTarget:self
+                              action:@selector(BtnClick:)
+                                forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:self.serverButton];
     }
+}
+
+//MyView中的按钮的事件
+- (void)BtnClick:(UIButton *)btn
+{
+    for (NSNetService* service in self.services) {
+        [service stop];
+    }
+    [self.services removeAllObjects];
+
+    [httpServer stop];
+    [delegate didFinishWithPinCode:nil guid:nil];
 }
 
 // 解析服务成功

@@ -180,15 +180,7 @@
 			[self.delegate didSelectBooksOrPodcasts];
         } else if (indexPath.row == 3) {
             // open shoutcast
-            if (shoutcastController == nil) {
-                NSLog(@"create shoutcast");
-                shoutcastController = [[ShoutcastController alloc] initWithNibName:@"ShoutcastController" bundle:nil];
-                shoutcastController.modalPresentationStyle = UIModalPresentationFullScreen;
-                [shoutcastController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-            }
-            [self presentModalViewController:shoutcastController animated:YES];
-            shoutcastController.view.superview.frame = CGRectMake(0, 0, 649,397);
-            shoutcastController.view.superview.center = self.view.center;
+            [self.delegate didSelectShoutCast];
         } else if (indexPath.row ==4) {
             // open spotify app
             NSURL *url = [NSURL URLWithString:@"spotify://"];

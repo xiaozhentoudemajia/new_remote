@@ -29,7 +29,7 @@
     RemoteHDViewController *vc = [[RemoteHDViewController alloc]init];
     self.window.rootViewController = vc;
 
-    self.window.backgroundColor = [UIColor purpleColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
     static const int ddLogLevel = LOG_LEVEL_VERBOSE;//定义日志级别

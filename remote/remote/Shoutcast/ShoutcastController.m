@@ -11,16 +11,19 @@
 
 @interface ShoutcastController ()
 @property (nonatomic, strong) UIWebView * webView;
+@property(strong,nonatomic)UIButton *serverButton;
 @end
 
 @implementation ShoutcastController
+
+@synthesize delegate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    // 1.创建webview，并设置大小，"20"为状态栏高度
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    // 1.创建webview，并设置大小
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 80, 414, 636)];
 //    webView.scalesPageToFit=YES;
     self.webView.delegate = self;
 
@@ -34,11 +37,25 @@
 
     // 最后将webView添加到界面
     [self.view addSubview:self.webView];
+
+    self.serverButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 414, 80)];
+    [self.serverButton setTitle:@"Return" forState:UIControlStateNormal];
+    [self.serverButton addTarget:self
+                          action:@selector(BtnClick:)
+                forControlEvents:UIControlEventTouchUpInside];
+    [self.serverButton setBackgroundColor:[UIColor grayColor]];
+    [self.view addSubview:self.serverButton];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+//MyView中的按钮的事件
+- (void)BtnClick:(UIButton *)btn
+{
+    [delegate didFinishShoutcast];
 }
 
 /*

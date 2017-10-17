@@ -66,7 +66,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 	
 	// init navigation controller
 	navigationController.navigationBarHidden = YES;
-	navigationController.view.frame = CGRectMake(244, 70, 524, 890);
+	navigationController.view.frame = CGRectMake(200, 70, 214, 622);
 	navigationController.delegate = self;
 	[self.view addSubview:navigationController.view];
 	
@@ -269,6 +269,13 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 #pragma mark -
+#pragma mark ShoutcastController methods
+
+-(void)didFinishShoutcast{
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma mark -
 #pragma mark WifiConfigDelegate methods
 
 - (void) didFinishWifiConfig {
@@ -343,7 +350,14 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 - (void)didSelectShoutCast{
-    segmentedControl.hidden = YES;
+    if (shoutcastController == nil) {
+        NSLog(@"create shoutcast");
+        shoutcastController = [[ShoutcastController alloc] initWithNibName:@"ShoutcastController" bundle:nil];
+        shoutcastController.modalPresentationStyle = UIModalPresentationFullScreen;
+        [shoutcastController setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [shoutcastController setDelegate:self];
+    }
+    [self presentModalViewController:shoutcastController animated:YES];
 }
 
 - (void)didSelectWifiConfig{

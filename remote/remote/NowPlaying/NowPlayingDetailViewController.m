@@ -196,11 +196,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 		
 		if (o == UIDeviceOrientationLandscapeLeft || o == UIDeviceOrientationLandscapeRight) {
 			DDLogVerbose(@"landscape"); 
-			listController.tableView.frame = CGRectMake(0, 142, 768, 529);
+			listController.tableView.frame = CGRectMake(0, 0, 768, 529);
 			
 		} else if (o == UIDeviceOrientationPortrait || o == UIDeviceOrientationPortraitUpsideDown) {
 			DDLogVerbose(@"portrait");
-			listController.tableView.frame = CGRectMake(0, 0, 768, 768);
+			listController.tableView.frame = CGRectMake(0, 0, 414, 500);
 		}
 		[listController scrollToCurrentlyPlayingTrack];
 		[containerView addSubview:[listController view]];
@@ -287,8 +287,10 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 }
 
 - (void) _repositionToPortrait{
-	containerView.frame = CGRectMake(0, 142, 768, 768);
-	listController.tableView.frame = CGRectMake(0, 0, 768, 768);
+    /*
+	containerView.frame = CGRectMake(0, 142, 414, 414);
+    [containerView setContentMode:UIViewContentModeScaleToFill];
+	listController.tableView.frame = CGRectMake(0, 142, 414, 414);
 	if (!fullScreen){
 		bottomBackground.alpha = 1.0;
 		bottomBackgroundLandscape.alpha = 0.0;
@@ -296,7 +298,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 		topBackgroundLandscape.alpha = 0.0;
 	}
 	backButton.frame = CGRectMake(30, backButton.frame.origin.y, backButton.frame.size.width, backButton.frame.size.height);
-	toggleButtonView.frame = CGRectMake(687, toggleButtonView.frame.origin.y, toggleButtonView.frame.size.width, toggleButtonView.frame.size.height);
+	toggleButtonView.frame = CGRectMake(335, toggleButtonView.frame.origin.y, toggleButtonView.frame.size.width, toggleButtonView.frame.size.height);
 	nextButton.frame = CGRectMake(689, nextButton.frame.origin.y, nextButton.frame.size.width, nextButton.frame.size.height);
 	previousButton.frame = CGRectMake(570, previousButton.frame.origin.y, previousButton.frame.size.width, previousButton.frame.size.height);
 	playButton.frame = CGRectMake(643, playButton.frame.origin.y, playButton.frame.size.width, playButton.frame.size.height);
@@ -306,7 +308,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 	volumeSlider.frame = CGRectMake(23, volumeSlider.frame.origin.y, volumeSlider.frame.size.width, volumeSlider.frame.size.height);
 	donePlayingTime.frame = CGRectMake(56, donePlayingTime.frame.origin.y, donePlayingTime.frame.size.width, donePlayingTime.frame.size.height);
 	remainingPlayingTime.frame = CGRectMake(670, remainingPlayingTime.frame.origin.y, remainingPlayingTime.frame.size.width, remainingPlayingTime.frame.size.height);
-	progress.frame = CGRectMake(114, progress.frame.origin.y, progress.frame.size.width, progress.frame.size.height);
+	progress.frame = CGRectMake(114, progress.frame.origin.y, progress.frame.size.width, progress.frame.size.height);*/
 	isPortraitMode = YES;
 }
 

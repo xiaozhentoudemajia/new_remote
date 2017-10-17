@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		65135BD31F94DEF5003C7D35 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BD21F94DEF5003C7D35 /* AppDelegate.m */; };
-		65135BD61F94DEF5003C7D35 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BD51F94DEF5003C7D35 /* ViewController.m */; };
 		65135BDB1F94DEF5003C7D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65135BDA1F94DEF5003C7D35 /* Assets.xcassets */; };
 		65135BDE1F94DEF5003C7D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65135BDC1F94DEF5003C7D35 /* LaunchScreen.storyboard */; };
 		65135BE11F94DEF5003C7D35 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65135BE01F94DEF5003C7D35 /* main.m */; };
@@ -168,6 +167,7 @@
 		658F80B81F94FC4800D1EDA5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80B41F94FC4800D1EDA5 /* AsyncImageView.m */; };
 		658F80BB1F94FC5600D1EDA5 /* SpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80BA1F94FC5600D1EDA5 /* SpeakersViewController.m */; };
 		658F80BE1F94FC5E00D1EDA5 /* AlbumCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80BD1F94FC5E00D1EDA5 /* AlbumCoverViewController.m */; };
+		8EA0C5E31F95C017006597F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0C5E21F95C017006597F7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,8 +191,6 @@
 		65135BCE1F94DEF4003C7D35 /* remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = remote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65135BD11F94DEF4003C7D35 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65135BD21F94DEF5003C7D35 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		65135BD41F94DEF5003C7D35 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		65135BD51F94DEF5003C7D35 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		65135BDA1F94DEF5003C7D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65135BDD1F94DEF5003C7D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65135BDF1F94DEF5003C7D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -440,6 +438,7 @@
 		658F80BC1F94FC5E00D1EDA5 /* AlbumCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCoverViewController.h; sourceTree = "<group>"; };
 		658F80BD1F94FC5E00D1EDA5 /* AlbumCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCoverViewController.m; sourceTree = "<group>"; };
 		658F80C21F94FE4E00D1EDA5 /* Remote_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Remote_Prefix.pch; path = remote/Remote_Prefix.pch; sourceTree = "<group>"; };
+		8EA0C5E21F95C017006597F7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,8 +535,6 @@
 				656D7FC21F94E7DE0050DD29 /* HttpProtocol */,
 				65135BD11F94DEF4003C7D35 /* AppDelegate.h */,
 				65135BD21F94DEF5003C7D35 /* AppDelegate.m */,
-				65135BD41F94DEF5003C7D35 /* ViewController.h */,
-				65135BD51F94DEF5003C7D35 /* ViewController.m */,
 				65135BDA1F94DEF5003C7D35 /* Assets.xcassets */,
 				65135BDC1F94DEF5003C7D35 /* LaunchScreen.storyboard */,
 				65135BDF1F94DEF5003C7D35 /* Info.plist */,
@@ -875,6 +872,7 @@
 		658F80BF1F94FE3100D1EDA5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8EA0C5E21F95C017006597F7 /* Localizable.strings */,
 				658DB6881F95049800376A2C /* layout */,
 				658DB60C1F9502A600376A2C /* image */,
 				658F813E1F9501F200D1EDA5 /* pch */,
@@ -1069,6 +1067,7 @@
 				658DB6711F9503E600376A2C /* icon.png in Resources */,
 				658DB6681F9503E600376A2C /* playlist.png in Resources */,
 				656D80931F94F9FA0050DD29 /* DetailedTrackCustomCellView.xib in Resources */,
+				8EA0C5E31F95C017006597F7 /* Localizable.strings in Resources */,
 				658DB6751F9503E600376A2C /* detailbg2.png in Resources */,
 				656D80951F94F9FA0050DD29 /* BooksAndPodcastsCell.xib in Resources */,
 			);
@@ -1153,7 +1152,6 @@
 				656D80A31F94FA930050DD29 /* NowPlayingCustomCellViewController.m in Sources */,
 				656D808E1F94F9FA0050DD29 /* PodcastTracksDatasource.m in Sources */,
 				656D80601F94F5F10050DD29 /* DDTTYLogger.m in Sources */,
-				65135BD61F94DEF5003C7D35 /* ViewController.m in Sources */,
 				656D80961F94F9FA0050DD29 /* AlbumsDatasource.m in Sources */,
 				656D801B1F94F38A0050DD29 /* DAAPResponseabar.m in Sources */,
 				656D80171F94F3890050DD29 /* DAAPResponsemdcl.m in Sources */,

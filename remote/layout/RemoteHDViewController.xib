@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES">
-    <device id="ipad9_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -43,12 +43,12 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="center" misplaced="YES" id="2">
-            <rect key="frame" x="0.0" y="0.0" width="768" height="1300"/>
+        <view contentMode="center" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="8">
-                    <rect key="frame" x="0.0" y="1256" width="768" height="44"/>
+                    <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items>
                         <barButtonItem title="Réglages" id="156" userLabel="Settings">
@@ -59,7 +59,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="36"/>
                         <barButtonItem style="plain" id="35">
                             <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="34">
-                                <rect key="frame" x="272" y="7.5" width="224" height="29"/>
+                                <rect key="frame" x="101.66666666666669" y="7.6666666666666288" width="224" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Morceaux"/>
@@ -79,8 +79,8 @@
                         </barButtonItem>
                     </items>
                 </toolbar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="21">
-                    <rect key="frame" x="0.0" y="70" width="243" height="933"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="20" sectionFooterHeight="20" id="21">
+                    <rect key="frame" x="0.0" y="70" width="200" height="422"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <connections>
@@ -88,8 +88,8 @@
                         <outlet property="delegate" destination="17" id="23"/>
                     </connections>
                 </tableView>
-                <view contentMode="scaleToFill" id="43" userLabel="NowPlaying">
-                    <rect key="frame" x="0.0" y="1002" width="243" height="254"/>
+                <view contentMode="scaleToFill" misplaced="YES" id="43" userLabel="NowPlaying">
+                    <rect key="frame" x="0.0" y="492" width="200" height="200"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="46" customClass="AsyncImageView">
@@ -151,17 +151,17 @@
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.95686274510000002" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="51" userLabel="Loading">
-                    <rect key="frame" x="244" y="70" width="524" height="1186"/>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="51" userLabel="Loading">
+                    <rect key="frame" x="200" y="70" width="214" height="622"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                     <subviews>
                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" style="gray" id="52">
-                            <rect key="frame" x="252" y="600" width="20" height="20"/>
+                            <rect key="frame" x="97" y="310" width="19" height="19"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </activityIndicatorView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Chargement en cours..." textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="53">
-                            <rect key="frame" x="197" y="670" width="131" height="21"/>
+                            <rect key="frame" x="42" y="345" width="131" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
                             <color key="textColor" red="0.40510949492454529" green="0.40510949492454529" blue="0.40510949492454529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -170,21 +170,21 @@
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" id="160" userLabel="Covers">
-                    <rect key="frame" x="244" y="70" width="524" height="1186"/>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="160" userLabel="Covers">
+                    <rect key="frame" x="200" y="70" width="214" height="622"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="108" userLabel="TopToolbar">
-                    <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="ToolbarBackground.png" id="127">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="70"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <slider opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" id="110">
-                            <rect key="frame" x="45" y="20" width="193" height="29"/>
+                        <slider opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" id="110">
+                            <rect key="frame" x="25" y="20" width="132" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <rect key="contentStretch" x="0.0" y="0.0" width="0.80000000000000004" height="1"/>
@@ -192,8 +192,8 @@
                                 <action selector="volumeChanged:" destination="-1" eventType="touchUpInside" id="125"/>
                             </connections>
                         </slider>
-                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="112">
-                            <rect key="frame" x="420" y="7" width="72" height="37"/>
+                        <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="112">
+                            <rect key="frame" x="200" y="7" width="45" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -208,8 +208,8 @@
                                 <action selector="previousClicked:" destination="-1" eventType="touchUpInside" id="122"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="113">
-                            <rect key="frame" x="487" y="3" width="44" height="44"/>
+                        <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="113">
+                            <rect key="frame" x="262" y="3" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -224,8 +224,8 @@
                                 <action selector="playClicked:" destination="-1" eventType="touchUpInside" id="119"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="114">
-                            <rect key="frame" x="487" y="3" width="44" height="44"/>
+                        <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="114">
+                            <rect key="frame" x="262" y="3" width="40" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -240,8 +240,8 @@
                                 <action selector="pauseClicked:" destination="-1" eventType="touchUpInside" id="121"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="115">
-                            <rect key="frame" x="527" y="7" width="72" height="37"/>
+                        <button opaque="NO" contentMode="center" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="115">
+                            <rect key="frame" x="318" y="7" width="45" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
@@ -256,23 +256,23 @@
                                 <action selector="nextClicked:" destination="-1" eventType="touchUpInside" id="120"/>
                             </connections>
                         </button>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" id="128">
-                            <rect key="frame" x="367" y="46" width="293" height="29"/>
+                        <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" continuous="NO" id="128">
+                            <rect key="frame" x="192" y="40" width="180" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="playingTimeChanged:" destination="-1" eventType="touchUpInside" id="144"/>
                                 <action selector="startingPlaytimeEdit:" destination="-1" eventType="touchDown" id="145"/>
                             </connections>
                         </slider>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="140">
-                            <rect key="frame" x="310" y="46" width="52" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="-00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="141">
+                            <rect key="frame" x="373" y="44" width="56" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="-00:00" lineBreakMode="tailTruncation" minimumFontSize="10" id="141">
-                            <rect key="frame" x="664" y="46" width="56" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="00:00" textAlignment="right" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="140">
+                            <rect key="frame" x="139" y="44" width="52" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                             <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -281,20 +281,20 @@
                     </subviews>
                     <color key="backgroundColor" red="0.55839413404464722" green="0.55839413404464722" blue="0.55839413404464722" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="vsep.png" id="134">
-                    <rect key="frame" x="243" y="70" width="1" height="1187"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="vsep.png" id="134">
+                    <rect key="frame" x="200" y="70" width="1" height="623"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                 </imageView>
                 <view alpha="0.0" contentMode="scaleToFill" id="136" userLabel="NotConnected">
-                    <rect key="frame" x="0.0" y="70" width="768" height="1186"/>
+                    <rect key="frame" x="0.0" y="70" width="414" height="622"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="connect.png" id="137">
-                            <rect key="frame" x="256" y="465" width="256" height="256"/>
+                            <rect key="frame" x="79" y="183" width="256" height="256"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" minimumFontSize="10" id="138">
-                            <rect key="frame" x="161" y="803" width="445" height="114"/>
+                            <rect key="frame" x="-15" y="381" width="445" height="114"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <string key="text">Vous n'êtes connecté à aucune librairie
 Veuillez sélectionner le bouton en bas à gauche de l'écran
@@ -324,6 +324,7 @@ Veuillez sélectionner le bouton en bas à gauche de l'écran
             <extendedEdge key="edgesForExtendedLayout"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
             <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="90">
+                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
             </navigationBar>
             <viewControllers>
