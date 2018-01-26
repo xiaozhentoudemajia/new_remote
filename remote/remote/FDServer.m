@@ -30,7 +30,7 @@
 #ifdef CONFIGURATION_DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
-static const int ddLogLevel = LOG_LEVEL_WARN;
+static const int ddLogLevel = LOG_LEVEL_INFO;
 #endif
 
 
@@ -498,7 +498,7 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 	[daapReq asyncRequestAndParse:[NSURL URLWithString:requestUrl] withTimeout:20];
 	self.daapReqRep = daapReq;
 	[daapReq release];
-	//[NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(_renewConnection:) userInfo:nil repeats:NO];
+	[NSTimer scheduledTimerWithTimeInterval:10.0 target:self selector:@selector(_renewConnection:) userInfo:nil repeats:NO];
 }
 
 - (void) _renewConnection:(NSTimer *)timer{

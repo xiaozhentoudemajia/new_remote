@@ -16,7 +16,7 @@
 #define kRequestServerInfo @"http://%@:%@/server-info"
 #define kRequestDatabases @"http://%@:%@/databases?session-id=%d"
 #define kRequestControl @"http://%@:%@/crtl-int"
-#define kRequestPlayStatusUpdate @"^http://%@:%@/ctrl-int/[[:digit:]]+/playstatusUpdate$revision-number=%d&session-id=%d"
+#define kRequestPlayStatusUpdate @"http://%@:%@/ctrl-int/1/playstatusupdate?revision-number=%d&session-id=%d"
 #define kRequestPropertyVolume @"http://%@:%@/ctrl-int/1/getproperty?properties=dmcp.volume&session-id=%d"
 #define kRequestChangePropertyVolume @"http://%@:%@/ctrl-int/1/setproperty?dmcp.volume=%d&session-id=%d"
 #define kRequestShoutcast @"http://%@:%@/ctrl-int/1/setproperty?shoutcast-url=%@&com.apple.itunes.extended-media-kind=1&session-id=%d"

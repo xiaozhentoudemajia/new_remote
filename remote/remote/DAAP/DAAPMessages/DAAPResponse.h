@@ -27,7 +27,7 @@
 - (long long) parseLongLong:(NSData *)data;
 - (long) parseLong:(NSData *) data;
 - (short) parseShort:(NSData *) data;
-- (BOOL) parseBoolean:(NSData *) data;
+- (Byte) parseBoolean:(NSData *) data;
 - (void) getBytes:(Byte *)buffer fromData:(NSData *)data length:(int)length;
 - (NSString *) parseCommandName:(NSData *) data atPosition:(int)position;
 - (void) parse;

@@ -138,7 +138,7 @@
 	
 }
 
-- (BOOL) parseBoolean:(NSData *) theData{
+- (Byte) parseBoolean:(NSData *) theData{
 	Byte res[1];
 	[self getBytes:res fromData:theData length:1];
 	NSValue *hop = [NSValue value:res withObjCType:@encode(short)];
