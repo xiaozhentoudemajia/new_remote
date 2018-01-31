@@ -167,6 +167,8 @@
 		658F80B81F94FC4800D1EDA5 /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80B41F94FC4800D1EDA5 /* AsyncImageView.m */; };
 		658F80BB1F94FC5600D1EDA5 /* SpeakersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80BA1F94FC5600D1EDA5 /* SpeakersViewController.m */; };
 		658F80BE1F94FC5E00D1EDA5 /* AlbumCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 658F80BD1F94FC5E00D1EDA5 /* AlbumCoverViewController.m */; };
+		8E620662202045910006DA50 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E62065F202045900006DA50 /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		8E620663202045910006DA50 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E620661202045910006DA50 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		8EA0C5E31F95C017006597F7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0C5E21F95C017006597F7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
@@ -438,6 +440,10 @@
 		658F80BC1F94FC5E00D1EDA5 /* AlbumCoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCoverViewController.h; sourceTree = "<group>"; };
 		658F80BD1F94FC5E00D1EDA5 /* AlbumCoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCoverViewController.m; sourceTree = "<group>"; };
 		658F80C21F94FE4E00D1EDA5 /* Remote_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Remote_Prefix.pch; path = remote/Remote_Prefix.pch; sourceTree = "<group>"; };
+		8E62065E2020458F0006DA50 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		8E62065F202045900006DA50 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		8E620660202045900006DA50 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		8E620661202045910006DA50 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		8EA0C5E21F95C017006597F7 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -496,6 +502,10 @@
 		65135BD01F94DEF4003C7D35 /* remote */ = {
 			isa = PBXGroup;
 			children = (
+				8E62065E2020458F0006DA50 /* GCDAsyncSocket.h */,
+				8E62065F202045900006DA50 /* GCDAsyncSocket.m */,
+				8E620660202045900006DA50 /* GCDAsyncUdpSocket.h */,
+				8E620661202045910006DA50 /* GCDAsyncUdpSocket.m */,
 				658F80BC1F94FC5E00D1EDA5 /* AlbumCoverViewController.h */,
 				658F80BD1F94FC5E00D1EDA5 /* AlbumCoverViewController.m */,
 				658F80B91F94FC5600D1EDA5 /* SpeakersViewController.h */,
@@ -1110,6 +1120,7 @@
 				656D800A1F94F3890050DD29 /* DAAPResponseagal.m in Sources */,
 				656D803A1F94F4A00050DD29 /* MyHTTPConnection.m in Sources */,
 				656D80191F94F38A0050DD29 /* DAAPResponseadbs.m in Sources */,
+				8E620662202045910006DA50 /* GCDAsyncSocket.m in Sources */,
 				658F80BE1F94FC5E00D1EDA5 /* AlbumCoverViewController.m in Sources */,
 				656D80371F94F4A00050DD29 /* HTTPServer.m in Sources */,
 				656D80621F94F5F10050DD29 /* DDLog.m in Sources */,
@@ -1147,6 +1158,7 @@
 				656D80161F94F3890050DD29 /* DAAPResponseaply.m in Sources */,
 				658F80A61F94FBFB00D1EDA5 /* MasterViewController.m in Sources */,
 				658F80AF1F94FC2800D1EDA5 /* SessionManager.m in Sources */,
+				8E620663202045910006DA50 /* GCDAsyncUdpSocket.m in Sources */,
 				656D80441F94F5550050DD29 /* AsyncSocket.m in Sources */,
 				656D80181F94F3890050DD29 /* DAAPResponseavdb.m in Sources */,
 				656D80A31F94FA930050DD29 /* NowPlayingCustomCellViewController.m in Sources */,

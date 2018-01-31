@@ -6,6 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ifaddrs.h>
+#import <arpa/inet.h>
+#import "GCDAsyncUdpSocket.h"
 
 @protocol WifiConfigDelegate
 
@@ -18,6 +21,13 @@
     id<WifiConfigDelegate> __unsafe_unretained delegate;
     IBOutlet UITextField *ssid;
     IBOutlet UITextField *password;
+    IBOutlet UILabel *status;
+
+    GCDAsyncUdpSocket * revSocket;
+    GCDAsyncUdpSocket * sendSocket;
+    NSMutableArray *payload;
+    NSTimer *timer;
+    BOOL done;
 }
 
 @property (nonatomic, assign) id<WifiConfigDelegate> delegate;

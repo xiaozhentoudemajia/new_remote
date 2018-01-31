@@ -71,6 +71,7 @@
 - (IBAction) buttonSelected:(id)sender;
 - (IBAction) speakerSelectorClicked:(id)sender;
 - (IBAction) showNowPlayingDetail:(id)sender;
+- (IBAction) wpsClicked:(id)sender;
 
 @end
 

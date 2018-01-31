@@ -19,12 +19,14 @@
 #import "DDLog.h"
 #import "Reachability.h"
 
+#import <ifaddrs.h>
+#import <arpa/inet.h>
+
 #ifdef CONFIGURATION_DEBUG
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #else
 static const int ddLogLevel = LOG_LEVEL_WARN;
 #endif
-
 
 @interface RemoteHDViewController(PrivateMethods)
 
@@ -253,6 +255,11 @@ static const int ddLogLevel = LOG_LEVEL_WARN;
 //	[self.view addSubview:self.nowPlayingDetail.view];
 	[c release];
 	nowPlayingDetailShown = YES;
+}
+
+- (IBAction)wpsClicked:(id)sender {
+    NSLog(@"wpsClicked");
+    [self didSelectWifiConfig];
 }
 
 - (void)didFinishWithNowPlaying{
