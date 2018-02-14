@@ -146,13 +146,13 @@
 
     //ssid, pwd
     start = 2;
-    NSString *sp = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%d%@%d", pwd, 0, ssid, 0]];
+    NSString *sp = [[NSString alloc] initWithString:[NSString stringWithFormat:@"%@%@%@%@", pwd, @"^", ssid, @"^"]];
     NSLog(@"sp %@", sp);
     for (int i=0; i < ssid.length + pwd.length +2; i++, start++) {
         evenMask = (start%2 == 0)?170:85;
 
         dataMask = [[sp substringFromIndex:i] substringToIndex:1];
-        if ([dataMask isEqualToString:@"0"]) {
+        if ([dataMask isEqualToString:@"^"]) {
             asciiCode = 0;
         }else {
             asciiCode = [dataMask characterAtIndex:0];
